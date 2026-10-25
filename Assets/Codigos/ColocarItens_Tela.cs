@@ -44,7 +44,12 @@ public class ColocarItens_Tela : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if(eventData.button == PointerEventData.InputButton.Left)
         {
+            Grid grid = FindFirstObjectByType<Grid>();
 
+            if(grid != null)
+            {
+                grid.CriarGrid();
+            }
         }
     }
 }

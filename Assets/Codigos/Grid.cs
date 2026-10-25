@@ -23,7 +23,6 @@ public class Grid : MonoBehaviour
     {
         cam = Camera.main;
         materialLinhas = new Material(Shader.Find("Sprites/Default"));
-        CriarGrid();
         //Criar_CaixaCursorMouse();
     }
 
@@ -35,7 +34,7 @@ public class Grid : MonoBehaviour
 
     //Outras funções
 
-    private void CriarGrid()
+    public void CriarGrid()
     {
         pastaLinhas = new GameObject("LinhasGrid");
         pastaLinhas.transform.SetParent(transform);

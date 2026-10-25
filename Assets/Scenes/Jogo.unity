@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 44258624}
   - component: {fileID: 44258623}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: Base_do_inventario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 591151323}
   - component: {fileID: 591151322}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: primeiro_bloco_do_inventario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1325,6 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColocarItens_Tela
   corPassarMouse_Transparencia: 217
+  objetoSpawnar: {fileID: 6421288586627749547, guid: ecad02084456e344ea23e0fafcfe062e, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

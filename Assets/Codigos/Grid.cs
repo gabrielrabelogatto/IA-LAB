@@ -123,4 +123,28 @@ public class Grid : MonoBehaviour
         caixaCursor.sortingOrder = 10; // Fica acima das linhas da grade
         caixaCursor.enabled = false;
     }
+
+    public Vector3 ObterPosicaoGridAtual()
+    {
+        if (cam == null) return Vector3.zero;
+
+        Vector3 mouseMundo = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 origemReal = (Vector2)transform.position + posicaoInicial_Grid;
+
+        int celulaX = Mathf.FloorToInt((mouseMundo.x - origemReal.x) / tamanhoGrid);
+        int celulaY = Mathf.FloorToInt((mouseMundo.y - origemReal.y) / tamanhoGrid);
+
+        // Verifica se o mouse está dentro dos limites da grade
+        if (celulaX >= 0 && celulaX < colunas && celulaY >= 0 && celulaY < linhas)
+        {
+            float cantoX = origemReal.x + (celulaX * tamanhoGrid);
+            float cantoY = origemReal.y + (celulaY * tamanhoGrid);
+
+            // Devolve o centro exato do quadrado (se o teu prefab tiver o pivot no centro)
+            // Se o pivot do prefab for no canto inferior esquerdo, retira a parte do "+ (tamanhoGrid / 2f)"
+            return new Vector3(cantoX + (tamanhoGrid / 2f), cantoY + (tamanhoGrid / 2f), 0);
+        }
+
+        return Vector3.zero; // Retorna 0,0,0 caso clique fora do grid
+    }
 }
